@@ -36,7 +36,6 @@ prayers = ["fajr","dhuhr","asr","maghrib","isha"]
 for pray in prayers:
 	pray_time = getTime(pray)	
 	schedule.every().day.at(pray_time).do(suspend)
-	print pray_time
 
 while True:
     schedule.run_pending()
